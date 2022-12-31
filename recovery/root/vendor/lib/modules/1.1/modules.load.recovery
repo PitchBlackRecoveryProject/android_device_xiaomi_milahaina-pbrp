@@ -1,0 +1,7 @@
+hwid.ko
+adsp_loader_dlkm.ko
+fts_touch_spi.ko
+focaltech_touch.ko
+msm_drm.ko
+qti_battery_charger_main.ko
+xiaomi_touch.ko

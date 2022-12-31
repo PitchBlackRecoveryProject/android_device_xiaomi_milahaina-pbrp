@@ -1,0 +1,7 @@
+/vendor/lib/modules/1.1/fts_touch_spi.ko: /vendor/lib/modules/1.1/msm_drm.ko /vendor/lib/modules/1.1/xiaomi_touch.ko
+/vendor/lib/modules/1.1/qti_battery_charger_main.ko: /vendor/lib/modules/1.1/hwid.ko /vendor/lib/modules/1.1/msm_drm.ko
+/vendor/lib/modules/1.1/xiaomi_touch.ko:
+/vendor/lib/modules/1.1/hwid.ko:
+/vendor/lib/modules/1.1/msm_drm.ko:
+/vendor/lib/modules/1.1/adsp_loader_dlkm.ko:
+/vendor/lib/modules/1.1/focaltech_touch.ko: /vendor/lib/modules/1.1/hwid.ko /vendor/lib/modules/1.1/msm_drm.ko
