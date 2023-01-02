@@ -156,7 +156,7 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
-TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko texfat.ko tntfs.ko xiaomi_touch.ko"
+TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi_k8.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko qti_battery_charger_main_odin.ko texfat.ko tntfs.ko xiaomi_touch.ko"
 
 # TWRP Debug Flags
 #TWRP_EVENT_LOGGING := true
