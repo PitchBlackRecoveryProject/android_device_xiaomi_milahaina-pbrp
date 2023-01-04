@@ -168,6 +168,7 @@ TW_LOAD_VENDOR_MODULES := msm_drm.ko \
 #BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(TW_LOAD_VENDOR_MODULES)
 BOARD_RECOVERY_KERNEL_MODULES := $(strip $(shell for i in $(TW_LOAD_VENDOR_MODULES); do echo $(DEVICE_PATH)/prebuilt/$$i; done))
 TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi_k8.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko qti_battery_charger_main_odin.ko texfat.ko tntfs.ko xiaomi_touch.ko led-class-flash.ko leds-qti-tri-led.ko leds-qti-flash.ko"
+TW_BATTERY_SYSFS_WAIT_SECONDS := 5
 
 # TWRP Debug Flags
 #TWRP_EVENT_LOGGING := true
