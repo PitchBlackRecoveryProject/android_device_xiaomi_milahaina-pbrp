@@ -151,23 +151,28 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.bootimage.build.date.utc=ro.build.date.utc;ro.odm.build.date.utc=ro.build.date.utc;ro.product.build.date.utc=ro.build.date.utc;ro.system.build.date.utc=ro.build.date.utc;ro.system_ext.build.date.utc=ro.build.date.utc;ro.vendor.build.date.utc=ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
-TW_LOAD_VENDOR_MODULES := msm_drm.ko \
-    adsp_loader_dlkm.ko \
-    fts_touch_spi.ko \
-    focaltech_touch.ko \
-    hwid.ko \
-    leds-qti-flash.ko \
-    qti_battery_charger_main.ko \
-    xiaomi_touch.ko
-
-#BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(TW_LOAD_VENDOR_MODULES)
-BOARD_RECOVERY_KERNEL_MODULES := $(strip $(shell for i in $(TW_LOAD_VENDOR_MODULES); do echo $(DEVICE_PATH)/prebuilt/$$i; done))
-TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi_k8.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko qti_battery_charger_main_odin.ko texfat.ko tntfs.ko xiaomi_touch.ko led-class-flash.ko leds-qti-tri-led.ko leds-qti-flash.ko"
+BOARD_RECOVERY_KERNEL_MODULES := \
+	$(DEVICE_PATH)/prebuilt/msm_drm.ko \
+	$(DEVICE_PATH)/prebuilt/adsp_loader_dlkm.ko \
+	$(DEVICE_PATH)/prebuilt/fts_touch_spi.ko \
+	$(DEVICE_PATH)/prebuilt/focaltech_touch.ko \
+	$(DEVICE_PATH)/prebuilt/hwid.ko \
+	$(DEVICE_PATH)/prebuilt/qti_battery_charger_main.ko \
+	$(DEVICE_PATH)/prebuilt/xiaomi_touch.ko \
+	$(DEVICE_PATH)/prebuilt/apr_dlkm.ko \
+	$(DEVICE_PATH)/prebuilt/q6_notifier_dlkm.ko \
+	$(DEVICE_PATH)/prebuilt/q6_pdr_dlkm.ko \
+	$(DEVICE_PATH)/prebuilt/snd_event_dlkm.ko \
+	$(DEVICE_PATH)/prebuilt/led-class-flash.ko \
+	$(DEVICE_PATH)/prebuilt/leds-qti-flash.ko \
+	$(DEVICE_PATH)/prebuilt/leds-qti-tri-led.ko
+TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko xiaomi_touch.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko led-class-flash.ko leds-qti-flash.ko leds-qti-tri-led.ko"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 5
 
 # TWRP Debug Flags
