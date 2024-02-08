@@ -174,7 +174,7 @@ BOARD_RECOVERY_KERNEL_MODULES := \
 	$(DEVICE_PATH)/prebuilt/leds-qti-flash.ko \
 	$(DEVICE_PATH)/prebuilt/leds-qti-tri-led.ko
 TW_LOAD_VENDOR_MODULES := "msm_drm.ko adsp_loader_dlkm.ko fts_touch_spi.ko focaltech_touch.ko hwid.ko qti_battery_charger_main.ko xiaomi_touch.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko led-class-flash.ko leds-qti-flash.ko leds-qti-tri-led.ko"
-TW_BATTERY_SYSFS_WAIT_SECONDS := 5
+TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 
 # TWRP Debug Flags
 #TWRP_EVENT_LOGGING := true
